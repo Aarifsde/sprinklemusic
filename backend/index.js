@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 //importing routes
 import userRoutes from "./routes/userRoutes.js";
