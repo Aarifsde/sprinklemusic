@@ -55,6 +55,8 @@ export const UserProvider = ({ children }) => {
       navigate("/");
       fetchSongs();
       fetchAlbums();
+
+      window.location.reload();
     } catch (error) {
       toast.error(error.response.data.message);
       setBtnLoading(false);

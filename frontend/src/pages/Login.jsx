@@ -15,6 +15,8 @@ const Login = () => {
     const submitHandler = e => {
         e.preventDefault();
         loginUser(email,password, navigate);
+
+
     }
   return (
     <div className="flex items-center justify-center h-screen max-h-screen">

@@ -4,6 +4,7 @@ import connectDb from "./database/db.js";
 import cookieParser from "cookie-parser";
 import cloudinary from "cloudinary";
 import path from 'path'
+import cors from "cors";
 
 
 dotenv.config();
@@ -16,13 +17,18 @@ cloudinary.v2.config({
 
 const app = express();
 
-// using middlewares
+// middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({
+  origin: 'https://sprinklemusic.onrender.com',
+  credentials: true,
+}));
+
 
 const port = process.env.PORT || 5000;
 
-//importing routes
+//Routes
 import userRoutes from "./routes/userRoutes.js";
 import songRoutes from "./routes/songRoutes.js";
 
