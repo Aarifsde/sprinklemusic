@@ -53,10 +53,15 @@ export const UserProvider = ({ children }) => {
       setIsAuth(true);
       setBtnLoading(false);
       navigate("/");
+
+      window.alert("You have successfully logged in!");
+
+      window.location.reload();
+
+      
       fetchSongs();
       fetchAlbums();
 
-      window.location.reload();
     } catch (error) {
       toast.error(error.response.data.message);
       setBtnLoading(false);

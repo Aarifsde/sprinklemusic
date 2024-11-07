@@ -14,15 +14,15 @@ const Sidebar = () => {
           className="flex items-center gap-3 pl-8 cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <img src={assets.home_icon} className="w-6" alt="" />
-          <p className="font-bold">Home</p>
+          <img src={assets.sprinkle_logo} className="w-6" alt="" />
+          <p className="font-bold">Sprinke<span className="text-violet-500">.Music</span></p>
         </div>
         <div
           className="flex items-center gap-3 pl-8 cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <img src={assets.search_icon} className="w-6" alt="" />
-          <p className="font-bold">Search</p>
+          <img src={assets.home_icon} className="w-6" alt="" />
+          <p className="font-bold">Home</p>
         </div>
       </div>
 
