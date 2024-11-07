@@ -32,6 +32,11 @@ export const UserProvider = ({ children }) => {
       setIsAuth(true);
       setBtnLoading(false);
       navigate("/");
+
+      window.alert("You have successfully Registered!");
+
+      window.location.reload();
+
       fetchSongs();
       fetchAlbums();
     } catch (error) {
